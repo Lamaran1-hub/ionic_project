@@ -1,2 +1,103 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+// Système de Design Premium - ResaGuinée
+// Thème Inspiré des plus grandes applications modernes de réservation (Airbnb/Booking)
+// Avec une touche de couleurs locales optimisées pour l'Afrique.
+
+:root {
+  /** Couleurs Principales **/
+  --ion-color-primary: #ff4a22; // Coral Vibrant (Style Airbnb / Passion)
+  --ion-color-primary-rgb: 255, 74, 34;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #e0411e;
+  --ion-color-primary-tint: #ff5c38;
+
+  --ion-color-secondary: #1a5cff; // Bleu MTN Premium / Sécurité
+  --ion-color-secondary-rgb: 26, 92, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #1751e0;
+  --ion-color-secondary-tint: #316cff;
+
+  --ion-color-tertiary: #ffc409; // Jaune Orange Money / Soleil
+  --ion-color-tertiary-rgb: 255, 196, 9;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-shade: #e0ac08;
+  --ion-color-tertiary-tint: #ffca22;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-shade: #28bb62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #1e1e24;
+  --ion-color-dark-rgb: 30, 30, 36;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-shade: #1a1a20;
+  --ion-color-dark-tint: #35353a;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  /** Gradients & Glassmorphism **/
+  --resa-gradient-primary: linear-gradient(135deg, #ff4a22 0%, #ff8e22 100%);
+  --resa-gradient-secondary: linear-gradient(135deg, #1a5cff 0%, #00c6ff 100%);
+  --resa-glass-bg: rgba(255, 255, 255, 0.7);
+  --resa-glass-border: rgba(255, 255, 255, 0.3);
+  --resa-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+
+  /** Arrière-plans par défaut (Clair) **/
+  --ion-background-color: #f8fafc;
+  --ion-background-color-rgb: 248, 250, 252;
+  --ion-text-color: #0f172a;
+  --ion-text-color-rgb: 15, 23, 42;
+}
+
+/** Thème Sombre Automatique **/
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #0f172a;
+    --ion-background-color-rgb: 15, 23, 42;
+    --ion-text-color: #f8fafc;
+    --ion-text-color-rgb: 248, 250, 252;
+
+    --ion-color-step-50: #14213d;
+    --ion-color-step-100: #1e293b;
+    --ion-color-step-200: #334155;
+    --ion-color-step-300: #475569;
+    --ion-color-step-400: #64748b;
+    --ion-color-step-500: #94a3b8;
+    --ion-color-step-600: #cbd5e1;
+    --ion-color-step-700: #e2e8f0;
+    --ion-color-step-800: #f1f5f9;
+    --ion-color-step-900: #f8fafc;
+
+    --resa-glass-bg: rgba(15, 23, 42, 0.8);
+    --resa-glass-border: rgba(255, 255, 255, 0.1);
+    
+    --ion-color-light: #1e293b;
+    --ion-color-light-rgb: 30, 41, 59;
+    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-shade: #0f172a;
+    --ion-color-light-tint: #334155;
+  }
+}

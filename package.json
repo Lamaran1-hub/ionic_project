@@ -6,6 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "emulators": "powershell -ExecutionPolicy Bypass -File scripts/emulators.ps1",
+    "emulators:stop": "powershell -ExecutionPolicy Bypass -Command \"$p=9099,8390,4000,4400; foreach($port in $p){ Get-NetTCPConnection -LocalPort $port -State Listen -EA SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -EA SilentlyContinue } }; Write-Host 'Ports emulateurs liberes.'\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -17,6 +19,7 @@
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
+    "@angular/fire": "^20.0.1",
     "@angular/forms": "^20.0.0",
     "@angular/platform-browser": "^20.0.0",
     "@angular/platform-browser-dynamic": "^20.0.0",
@@ -27,8 +30,10 @@
     "@capacitor/keyboard": "8.0.3",
     "@capacitor/status-bar": "8.0.2",
     "@ionic/angular": "^8.0.0",
+    "firebase": "^12.13.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
+    "socket.io-client": "^4.8.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
